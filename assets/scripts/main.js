@@ -76,7 +76,7 @@ function initFormHandler() {
 		let formData = new FormData(form);
 		// B5
 		let recipeObject = {}
-		for (let [key, value] of formData.entires()) {
+		for (let [key, value] of formData.entries()) {
 			recipeObject[key] = value;
 		}
 		// B6
@@ -84,7 +84,7 @@ function initFormHandler() {
 		// B7
 		recipeCard.data = recipeObject;
 		// B8
-		main.append(recipeCard);
+		document.querySelector('main').append(recipeCard);
 		// B9
 		let recipes = getRecipesFromStorage();
 		recipes.push(recipeObject);
